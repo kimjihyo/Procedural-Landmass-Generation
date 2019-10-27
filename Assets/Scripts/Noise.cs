@@ -14,13 +14,12 @@ public static class Noise
         {
             for (int x = 0; x < mapWidth; x++)
             {
-                for (int i = 0; i < octaves; i++)
-                {
-                    float sampleX = x / scale;
-                    float sampleY = y / scale;
-                    float perlinValue = Mathf.PerlinNoise(sampleX, sampleY);
-                    noiseMap[x, y] = perlinValue;
-                }
+
+                float sampleX = x / scale;
+                float sampleY = y / scale;
+                float perlinValue = Mathf.PerlinNoise(sampleX, sampleY);
+                noiseMap[x, y] = perlinValue;
+
             }
         }
 
